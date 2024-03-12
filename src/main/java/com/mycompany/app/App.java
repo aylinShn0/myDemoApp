@@ -36,6 +36,22 @@ public class App{
         if(list.size() != int_arr.length){
             throw new IllegalArgumentException("Invalid input. ArrayList size and array size are different. Must be same.");
         }
+        
+        for(int i = 0 ; i < int_arr.length; i++){
+            if(int_arr[i] > int_arr.length || int_arr[i] < 1) 
+                throw new IllegalArgumentException("Invalid input. ArrayList have some invalid value inside.");
+        }
+
+        for(int i = 0 ; i < int_arr.length; i++){
+            int local = int_arr[i];
+            for(int j=0; j < list.get(local-1).length; j++){
+                if(list.get(local-1)[j] == null || list.get(local-1)[j] <1 || list.get(local-1)[j] > 26 ){
+                    throw new IllegalArgumentException("Invalid input. ArrayList have some invalid value inside.");
+                }
+            }
+        }
+
+        
 
         String decrypted="";
         
