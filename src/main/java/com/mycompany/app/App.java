@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class App{
     public static void main(String[] args){
-        int[] arr = new int[3];
-        MyFunc(null, arr, 5, "aylin");
+        //int[] arr = new int[3];
+        //MyFunc(null, arr, 5, "aylin");
 
     }
 
@@ -16,11 +16,33 @@ public class App{
         *shift value + length of int arry shows how many shifts were made to decrypt the password.
         *Finally last parameter shows who the sender is but It is also encrypted.
         */
+
+        if(shift_value<0){
+            throw new IllegalArgumentException("Shift value must be greater than zero");
+        }
+
+        if(list == null){
+            throw new IllegalArgumentException("Invalid input. Arraylist parameter is not correct");
+        }
+
+        if(int_arr == null){
+            throw new IllegalArgumentException("Invalid input. Integer array parameter is not correct");
+        }
+
+        if(sender == null){
+            throw new IllegalArgumentException("Invalid input. Sender parameter is not correct");
+        }
+
+        if(list.size() != int_arr.length){
+            throw new IllegalArgumentException("Invalid input. ArrayList size and array size are different. Must be same.");
+        }
+
         String decrypted="";
         
-        int shift = (shift_value + int_arr.length) % 26; //final shift value
+        int shift = shift_value % 26; //final shift value
         String decryp_sender="";
         sender = sender.toLowerCase();
+
         for(int i = 0 ; i < sender.length();i++){
             int mod = ((sender.charAt(i) - 'a' + 1) + shift) % 26;
             decryp_sender = decryp_sender + (char)(('a' - 1) + mod);
@@ -34,7 +56,7 @@ public class App{
                 int mod = (current + shift) % 26;
                 decrypted = decrypted + (char)(('a' - 1) + mod);
             }
-            decrypted = decrypted + " ";//space ekle
+            decrypted = decrypted + " "; //space ekle
         }
         decrypted = decrypted + "-" + decryp_sender;
         return decrypted;
