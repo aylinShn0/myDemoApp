@@ -51,8 +51,8 @@ public class App{
     
         for(int i = 0 ; i < int_arr.length; i++){
             int local = int_arr[i];
-            for(int j=0; j < list.get(local).length; j++){
-                int current = list.get(local)[j];
+            for(int j=0; j < list.get(local-1).length; j++){
+                int current = list.get(local-1)[j];
                 int mod = (current + shift) % 26;
                 decrypted = decrypted + (char)(('a' - 1) + mod);
             }

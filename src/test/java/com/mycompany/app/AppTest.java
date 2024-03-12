@@ -51,7 +51,7 @@ public class AppTest
         int shift_value=8;
         ArrayList<Integer[]> list = new ArrayList<>();
         Integer[] first = {1 ,11};
-        Integer[] second = {23,6,21,9,17,8,12,23,22};
+        Integer[] second = {23,6,21,10,17,8,12,23,22};
         Integer[] third = {12,26,1,11};
         Integer[] fourth = {11,23,6,12,23,6,21,23};
         list.add(first);
@@ -67,7 +67,7 @@ public class AppTest
         int[] arr = {3,4,1,2};
         ArrayList<Integer[]> list = new ArrayList<>();
         Integer[] first = {1 ,11};
-        Integer[] second = {23,6,21,9,17,8,12,23,22};
+        Integer[] second = {23,6,21,10,17,8,12,23,22};
         Integer[] third = {12,26,1,11};
         Integer[] fourth = {11,23,6,12,23,6,21,23};
         list.add(first);
@@ -82,7 +82,7 @@ public class AppTest
         int[] arr = {3,4,1,2};
         ArrayList<Integer[]> list = new ArrayList<>();
         Integer[] first = {1 ,11};
-        Integer[] second = {23,6,21,9,17,8,12,23,22};
+        Integer[] second = {23,6,21,10,17,8,12,23,22};
         Integer[] third = {12,26,1,11};
         Integer[] fourth = {11,23,6,12,23,6,21,23};
         list.add(first);
@@ -95,10 +95,10 @@ public class AppTest
 
     public void testIsArrayandArrayListSizeSame(){
         int shift_value=8;
-        int[] arr = {3,4,1,2};
+        int[] arr = {3,4,1,2,7};
         ArrayList<Integer[]> list = new ArrayList<>();
         Integer[] first = {1 ,11};
-        Integer[] second = {23,6,21,9,17,8,12,23,22};
+        Integer[] second = {23,6,21,10,17,8,12,23,22};
         Integer[] third = {12,26,1,11};
         Integer[] fourth = {11,23,6,12,23,6,21,23};
         list.add(first);
@@ -114,7 +114,7 @@ public class AppTest
         int[] arr = {3,4,1,2};
         ArrayList<Integer[]> list = new ArrayList<>();
         Integer[] first = {1 ,11};
-        Integer[] second = {23,6,21,9,17,8,12,23,22};
+        Integer[] second = {23,6,21,10,17,8,12,23,22};
         Integer[] third = {12,26,1,11};
         Integer[] fourth = {11,23,6,12,23,6,21,23};
         list.add(first);
